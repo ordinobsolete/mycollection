@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{# Load current section variables #}
+
+  {% set nested_subsections = section.subsections %}
+
+{# End load section variables #}
+
+{{ section.content | safe }}
+
+<div class="columns is-multiline">
+  {% for path in nested_subsections %}
+    {% set nested_subsection = get_section(path=path) %}
+    <div class="column is-full">
+      <h1 class="title is-4">{{ nested_subsection.title }}</h1>
+    </div>
+    {%- for page in nested_subsection.pages -%}
+      {%- if page.extra.pictures -%}
+        {%- set image = page.extra.pictures[0] -%}
+        {%- set thumbnail = resize_image(path=image, width=250, height=167, format="webp", quality=50, op="fit") -%}  
+        <div class="column is-one-quarter">
+          <figure>
+            <a href="{{ page.permalink }}">
+              <img src="{{ thumbnail.url }}" style="border: solid 1px #073642;">
+              <figcaption class="has-text-centered px-1">
+                {{ page.title }}
+              </figcaption>
+            </a>
+          </figure>
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endfor -%}
+</div>
+
+{% endblock content %}

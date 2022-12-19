@@ -1,0 +1,5 @@
+.dockerignore
+.git*
+Dockerfile
+README.md
+static/processed_images*

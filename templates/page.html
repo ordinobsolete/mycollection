@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{# Load current section variables #}
+
+  {% set section = get_section(path=subsections[0]) %}
+
+{# End load section variables #}
+
+  <div class="column is-full">
+    <nav class="breadcrumb" aria-label="breadcrumbs">
+      <ul>
+        <li><a href="{{ config.base_url }}">Home</a></li>
+        <li><a href="{{ section.permalink }}">{{ section.title }}</a></li>
+        <li class="is-active"><a href="#" aria-current="page">{{ page.title }}</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="columns is-multiline">
+    {%- if page.extra.pictures -%}
+      {%- for picture in page.extra.pictures -%}
+        <div class="column">
+          <a href="{{ picture }}">
+            <img src="{{ picture }}" />
+          </a>
+        </div>
+        {%- endfor -%}
+    {%- endif -%}
+    <div class="column is-full">
+      {%- if page.extra.specs -%}
+      <h2 class="title title is-4">Specifications for {{ page.title }}</h2>
+      <div class="block">
+        Please note that most informations in the table below come from the internet.
+        I can't guarantie that they are all accurate.
+      </div>
+      <table class="table is-striped is-fullwidth is-bordered">
+      {%- for key, value in page.extra.specs -%}
+        <tr>
+          <td><strong>{{ key|capitalize }}</strong></td>
+          <td>{{ value }}</td>
+        </tr>
+      {%- endfor -%}
+      </table>
+      {%- endif -%}
+      {% if page.content -%}
+        <h2 class="title title is-4">More</h2>
+        {{ page.content | safe}}
+      {%- endif -%}
+    </div>
+  </div>
+
+{% endblock content %}
