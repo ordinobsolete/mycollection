@@ -1,0 +1,30 @@
+# Usage:
+#
+# ansible-playbook -i 'ordinobsolete.fr,' -u root deploy.yaml
+#
+---
+- hosts: 'ordinobsolete.fr'
+
+  vars:
+    local_path: 'public/'
+    remote_path: '/var/www/htdocs/ordinobsolete.fr/'
+
+  tasks:
+    - name: Ensure static website is locally Built
+      command: zola build
+      delegate_to: localhost
+
+    - name: Ensure website is remotely Deployed
+      synchronize:
+        src: "{{ local_path }}"
+        dest: "{{ remote_path }}"
+        archive: yes
+        delete: yes
+        recursive: yes
+
+    - name: Ensure website is Online
+      ansible.builtin.uri:
+        url: 'https://ordinobsolete.fr'
+        return_content: yes
+      register: http_response
+      failed_when: "'Ordinobsolete' not in http_response.content"
