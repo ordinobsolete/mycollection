@@ -21,6 +21,21 @@ template = "index.html"
       </div>
     </a>
   </div>
+   <div class="control" style="border: solid 1px; border-radius: 4px;">
+    <a href="https://video.ordinobsolete.fr/c/ordinobsolete_archives/videos">
+      <div class="tags has-addons">
+        <span class="tag is-medium is-white"><img style="width: 1.5rem;" src="./images/index/peertube.svg"/></span>
+        <span class="tag is-medium is-white">Ordinobsolète (archives) &#127467;&#127479;</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="block">
+  The first channel <em>Ordinobsolète</em> is dedicated to old computers. For example I have some videos about building a Windows 98 gaming PC. I will also try to make simple documentaries about various subjects such as sound cards. Links: <a href="https://www.youtube.com/@ordinobsolete2035">Youtube</a>, <a href="https://video.ordinobsolete.fr/c/ordinobsolete_archives/videos">Peertube</a>.
+</div>
+
+<div class="field is-grouped is-grouped-multiline">
   <div class="control" style="border: solid 1px; border-radius: 4px;">
     <a href="https://www.youtube.com/channel/UCoemvrJy2GCBCYBcDpzHr1g">
       <div class="tags has-addons">
@@ -29,10 +44,6 @@ template = "index.html"
       </div>
     </a>
   </div>
-</div>
-
-<div class="block">
-  The first channel <em>Ordinobsolète</em> is dedicated to old computers. For example I have some videos about building a Windows 98 gaming PC. I will also try to make simple documentaries about various subjects such as sound cards. Link: <a href="https://www.youtube.com/@ordinobsolete2035">Youtube</a>.
 </div>
 
 <div class="block">
