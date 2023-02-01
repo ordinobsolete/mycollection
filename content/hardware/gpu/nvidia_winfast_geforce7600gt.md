@@ -1,5 +1,5 @@
 +++
-title     = "Leadtek WinFast Geforce 7600GT"
+title     = "Leadtek WinFast Geforce A7600GT TDH"
 template  = "page.html"
 
 [extra]
@@ -10,7 +10,7 @@ pictures  = [
 
   [extra.specs]
   manufacturer        = "Leadtek"
-  model               = "7600 GT (WinFast)"
+  model               = "WinFast A7600 GT TDH (GeForce 7600 GT)"
   "gpu name"          = "G73-VZ-N-B1"
   "gpu arch"          = "Curie"
   "gpu clock speed"   = "560 MHz"
@@ -20,10 +20,13 @@ pictures  = [
   vramtype            = "GDDR3"
   vrambus             = "128 bit"
   directx             = "9.0c"
-  year                = 2007
+  year                = "2006?"
   interface           = "AGP 8x"
-  tdp                 = "40 W"
   condition           = "Working"
 +++
 
-Very quiet and powerfull card, I love it.
+<div class="block">Very quiet and powerfull card, I love it. GPU-Z reports AGP 4x however this should be 8x. Screenshot:</div>
+
+<center>
+  <img src="/images/gpu/nvidia_winfast_geforce7600gt_gpuz.gif" />
+</center>
