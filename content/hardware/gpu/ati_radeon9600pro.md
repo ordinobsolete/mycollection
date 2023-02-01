@@ -11,19 +11,18 @@ pictures  = [
   [extra.specs]
   manufacturer        = "Unknown"
   model               = "9600Pro"
-  "gpu name"          = "RV350 PRO"
-  "gpu arch"          = "Rage 8"
-  "gpu clock speed"   = "400 MHz"
-  "vram clock speed"  = "600 MHz"
+  "gpu name"          = "RV350"
+  "gpu arch"          = "R300"
+  "gpu clock speed"   = "400 MHz?"
+  "vram clock speed"  = "600 MHz?"
   lithography         = "130 nm"
-  vramsize            = "Unknown"
-  vramtype            = ""
-  vrambus             = ""
+  vramsize            = "256 MB"
+  vramtype            = "DDR"
+  vrambus             = "128 bit"
   directx             = "9.0"
-  year                = 2003
+  year                = "2003?"
   interface           = "AGP 8x"
-  tdp                 = "18 W"
-  condition           = "Working"
+  condition           = "Defective"
 +++
 
-This card refuses to work on my Socket 462/A platforms. However I was able to make it work in a HP Pavilion 424.fr.
+<div class="block">This card refuses to work on most computers (no video). However I was able to make it work 1 time on a specific computer.</div>

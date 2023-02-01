@@ -10,18 +10,19 @@ pictures  = [
 
   [extra.specs]
   manufacturer        = "Leadtek"
-  model               = "GeForce4 Ti 4200 (WinFast A250 LE 64MB)"
+  model               = "WinFast A250 LE 64MB (GeForce4 Ti 4200)"
   "gpu name"          = "NV25 A2"
   "gpu arch"          = "Kelvin"
   "gpu clock speed"   = "250 MHz"
-  "vram clock speed"  = "250 MHz"
+  "vram clock speed"  = "275 MHz"
   lithography         = "150 nm"
   vramsize            = "64 MB"
   vramtype            = "DDR"
-  vrambus             = "64 bit"
+  vrambus             = "128 bit"
   directx             = "8.1"
-  year                = 2002
+  year                = "2002?"
   interface           = "AGP 4x"
-  tdp                 = "Unknown"
   condition           = "Working"
 +++
+
+<div class="block">I am not able to make GPU-Z work with this card (instant system freeze).</div>
