@@ -8,4 +8,5 @@ default_language = "en"
 title = "Ordinobsolete"
 
 [extra]
-github  = "https://github.com/ordinobsolete/mycollection"
+github = "https://github.com/ordinobsolete/mycollection"
+issues = "https://github.com/ordinobsolete/mycollection/issues"

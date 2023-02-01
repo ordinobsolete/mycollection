@@ -18,24 +18,38 @@
     </nav>
   </div>
 
-  <div class="columns is-multiline">
+  <div class="columns is-multiline is-centered">
     {%- if page.extra.pictures -%}
+      {%- set length = page.extra.pictures | length -%}
       {%- for picture in page.extra.pictures -%}
-        <div class="column">
-          <a href="{{ picture }}">
-            <img src="{{ picture }}" />
-          </a>
-        </div>
-        {%- endfor -%}
-    {%- endif -%}
-    <div class="column is-full">
-      {%- if page.extra.specs -%}
-      <h2 class="title title is-4">Specifications for {{ page.title }}</h2>
-      <div class="block">
-        Please note that most informations in the table below come from the internet.
-        I can't guarantie that they are all accurate.
+        {%- if length == 1 -%}
+    <div class="column">
+      <a href="{{ picture }}">
+        <img src="{{ picture }}" />
+      </a>
+    </div>
+        {%- else -%}
+    <div class="column is-half">
+      <center>
+        <a href="{{ picture }}">
+          {%- set thumbnail = resize_image(path=picture, width=600, height=400, format="webp", quality=75, op="fit_height") -%}  
+          <img src="{{ thumbnail.url }}" />
+        </a>
+      </center>
+        {%- endif -%}
       </div>
-      <table class="table is-striped is-fullwidth is-bordered">
+      {%- endfor -%}
+    {%- endif -%}
+  </div>
+
+  <div class="columns">
+    <div class="column">
+      {%- if page.extra.specs -%}
+      <h2 class="title title is-4">{{ page.title }}</h2>
+      <div class="block">
+        Something incorrect in the table below ? You can open an <a href="{{ config.extra.issues }}">issue</a>.
+      </div>
+      <table class="table is-striped is-bordered is-fullwidth">
       {%- for key, value in page.extra.specs -%}
         <tr>
           <td width="33%">{{ key|upper }}</td>
