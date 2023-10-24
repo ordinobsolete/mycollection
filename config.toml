@@ -7,6 +7,10 @@ default_language = "en"
 # Title
 title = "Ordinobsolete"
 
+[markdown]
+render_emoji = true
+smart_punctuation = true
+
 [extra]
 github = "https://github.com/ordinobsolete/mycollection"
 issues = "https://github.com/ordinobsolete/mycollection/issues"
