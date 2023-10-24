@@ -1,6 +1,7 @@
 +++
-title = "Hardware"
+title    = "Hardware"
 template = "hardware.html"
+weight   = 10
 +++
 
 <article class="message is-dark">
