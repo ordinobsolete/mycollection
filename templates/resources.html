@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{# Load current section variables #}
+
+  {% set nested_subsections = section.subsections %}
+
+{# End load section variables #}
+
+{{ section.content | safe }}
+
+{% for page in section.pages %}
+<h1 class="title is-4">
+  <a href="{{ page.permalink }}">{{ page.title }}</a>
+</h1>
+<div class="block">
+  {{ page.description }}
+</div>
+{% endfor %}
+
+{% endblock content %}
