@@ -7,11 +7,11 @@
 
   vars:
     local_path: 'public/'
-    remote_path: '/var/www/htdocs/ordinobsolete.fr/'
+    remote_path: '/var/www/html/ordinobsolete.fr/'
 
   tasks:
     - name: Ensure static website is locally Built
-      command: zola build
+      command: flatpak run org.getzola.zola build
       delegate_to: localhost
 
     - name: Ensure website is remotely Deployed
