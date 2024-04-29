@@ -22,7 +22,6 @@ pictures  = [
   directx             = "8.1"
   year                = 2002
   interface           = "AGP 4x"
-  tdp                 = "Unknown"
   condition           = "Not tested"
 +++
 
