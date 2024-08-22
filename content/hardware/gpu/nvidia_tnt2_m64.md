@@ -22,5 +22,5 @@ pictures  = [
   directx            = "6"
   year               = "1999"
   interface          = "AGP 4x"
-  condition          = "Not tested"
+  condition          = "Working ☑️"
 +++

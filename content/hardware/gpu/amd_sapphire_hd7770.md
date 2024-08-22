@@ -22,5 +22,5 @@ pictures  = [
   directx            = "12"
   year               = "2012"
   interface          = "PCIe 3.0 x16"
-  condition          = "Not tested"
+  condition          =  "Working ☑️"
 +++
