@@ -11,7 +11,9 @@ pictures = [
   model         = "Audigy 2 ZS (SB0350)"
   year          = 2003
   interface     = "PCI"
-  condition     = "Working"
+  condition     = "Defective"
 +++
 
 Sound Blaster 16 emulation for DOS on Windows 98 is bugguy, a workarround is required.
+
+I burned a pin on the PCI interface when testing the card...
