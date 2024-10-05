@@ -4,6 +4,7 @@
 #
 ---
 - hosts: 'ordinobsolete.fr'
+  gather_facts: false
 
   vars:
     local_path: 'public/'
@@ -11,7 +12,7 @@
 
   tasks:
     - name: Ensure static website is locally Built
-      command: >
+      shell: >
         podman run
         --userns=keep-id
         -u "$(id -u):$(id -g)"
@@ -20,6 +21,8 @@
         ghcr.io/getzola/zola:v0.16.1
         build
       delegate_to: localhost
+      tags:
+        - build
 
     - name: Ensure website is remotely Deployed
       synchronize:
@@ -28,6 +31,8 @@
         archive: yes
         delete: yes
         recursive: yes
+      tags:
+        - deploy
 
     - name: Enforce permissions
       file:
@@ -36,6 +41,8 @@
         group: root
         mode: u=rx,g=rx,o=r
         recurse: true
+      tags:
+        - permissions
 
     - name: Ensure website is Online
       ansible.builtin.uri:
@@ -43,3 +50,5 @@
         return_content: yes
       register: http_response
       failed_when: "'Ordinobsolete' not in http_response.content"
+      tags:
+        - healthcheck
