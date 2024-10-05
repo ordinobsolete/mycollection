@@ -20,9 +20,8 @@ pictures  = [ "/images/cpu/amd_athlon64_3500_front.webp" ]
   cores         = 1
   threads       = 1
   condition     = "Untested"
-  "number of items"  = 2
 +++
 
-I own two of these CPUS. I really LOVE the Athlon64 logo, so there it is:
+I really LOVE the Athlon64 logo, so there it is:
 
 <img src="/images/cpu/logo_athlon64.svg"/>
