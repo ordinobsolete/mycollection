@@ -27,9 +27,6 @@ template = "index.html"
   <p>
     The first channel <em>Ordinobsolète</em> is dedicated to old computers. For example I have some videos about building a Windows 98 gaming PC. I will also try to make simple documentaries about various subjects such as sound cards. Links: <a href="https://www.youtube.com/@ordinobsolete2035">Youtube</a>, <a href="http://video.ordinobsolete.fr/">direct HTTP download</a>.
   </p>
-  <!-- <p>
-    <strong>New:</strong> my peertube instance has been replaced by simple http downloads <a href="http://video.ordinobsolete.fr/">here</a>.
-  </p> -->
   <article class="message is-info">
   <div class="message-body">
     📌 <strong>New:</strong> my peertube instance has been replaced by simple http downloads <a href="http://video.ordinobsolete.fr/">here</a>. 
