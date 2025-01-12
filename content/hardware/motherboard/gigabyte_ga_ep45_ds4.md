@@ -29,7 +29,7 @@ pictures  = ["/images/motherboard/gigabyte_ga-ep45-ds4_front.webp"]
   "sli support"              = "no"
   "crossfire support"        = "yes"
   year                       = 2008
-  condition                  = "Untested"
+  condition                  = "Working"
 +++
 
 Back in 2008 I had an X48 Gigabyte motherboard and I really loved it.
