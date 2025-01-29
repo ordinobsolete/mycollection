@@ -9,7 +9,7 @@ pictures  = [ "/images/cpu/amd_athlon64_3500_front.webp" ]
   manufacturer  = "AMD"
   model         = "Athlon64 3500+"
   "clock speed" = "2,2 GHz"
-  year          = 2004
+  year          = 2001
   codename      = "Venice"
   interface     = "Socket 939"
   lithography   = "90 nm"
@@ -19,7 +19,7 @@ pictures  = [ "/images/cpu/amd_athlon64_3500_front.webp" ]
   "64 bits"     = true
   cores         = 1
   threads       = 1
-  condition     = "Untested"
+  condition     = "Working"
 +++
 
 I really LOVE the Athlon64 logo, so there it is:
