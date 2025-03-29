@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{# Load current section variables #}
+
+  {% set section = get_section(path=subsections[1]) %}
+
+{# End load section variables #}
+
+<div class="column is-full">
+  <nav class="breadcrumb" aria-label="breadcrumbs">
+    <ul>
+      <li><a href="{{ config.base_url }}">Home</a></li>
+      <li><a href="{{ section.permalink }}">{{ section.title }}</a></li>
+      <li class="is-active"><a href="#" aria-current="page">{{ page.title }}</a></li>
+    </ul>
+  </nav>
+</div>
+
+<div class="columns">
+  <div class="column">
+    <h2 class="title title is-4">{{ page.title }}</h2>
+    <div class="block">
+      {{ page.description }}
+    </div>
+    <div class="block">
+      <img src="/images/stickers/libreoffice_draw.webp"/>
+    </div>
+    <h3 class="title title is-3">Available stickers</h3>
+    <table class="table is-striped is-bordered">
+      <thead>
+        <th>Sticker</th>
+        <th>Downloads</th>
+      </thead>
+      {%- for file in page.extra.files -%}
+        <tr>
+          <td width="12%"><img src="{{ file.thumbnail }}"/></td>
+          <td>
+            <a href="{{ file.odg_url }}">⬇️ Source for Libre Office Draw (.odg)</a><br/>
+            <a href="{{ file.pdf_url }}">⬇️ PDF version</a>
+          </td>
+        </tr>
+      {%- endfor -%}
+      </table>
+  </div>
+</div>
+
+{% if page.content -%}
+<div class="content">{{ page.content | safe }}</div>
+{%- endif -%}
+
+{% endblock content %}
