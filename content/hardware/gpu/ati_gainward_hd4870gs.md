@@ -1,5 +1,5 @@
 +++
-title     = "Gainward ATI HD4870 Golden SampleS"
+title     = "Gainward ATI HD4870 Golden Sample"
 template  = "page.html"
 
 [extra]
