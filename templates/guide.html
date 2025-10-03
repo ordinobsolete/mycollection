@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{# Load current section variables #}
+
+  {% set section = get_section(path=subsections[2]) %}
+
+{# End load section variables #}
+
+<div class="column is-full">
+  <nav class="breadcrumb" aria-label="breadcrumbs">
+    <ul>
+      <li><a href="{{ config.base_url }}">Home</a></li>
+      <li><a href="{{ section.permalink }}">{{ section.title }}</a></li>
+      <li class="is-active"><a href="#" aria-current="page">{{ page.title }}</a></li>
+    </ul>
+  </nav>
+</div>
+
+<h2 class="title title is-4">{{ page.title }}</h2>
+<div class="block">
+  Something incorrect in the table below ? You can open an <a href="{{ config.extra.issues }}">issue</a>.
+</div>
+
+{% if page.content -%}
+<div class="content">{{ page.content | safe }}</div>
+{%- endif -%}
+
+{% endblock content %}
