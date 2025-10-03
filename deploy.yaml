@@ -3,7 +3,8 @@
 # ansible-playbook -i 'ordinobsolete.fr,' -u root deploy.yaml
 #
 ---
-- hosts: 'ordinobsolete.fr'
+- name: Publish ordinobsolete.fr
+  hosts: 'ordinobsolete.fr'
   gather_facts: false
 
   vars:
@@ -12,30 +13,30 @@
 
   tasks:
     - name: Ensure static website is locally Built
-      shell: >
+      ansible.builtin.shell: >
         podman run
         --userns=keep-id
         -u "$(id -u):$(id -g)"
         -v $PWD:/app
         --workdir /app
-        ghcr.io/getzola/zola:v0.16.1
+        ghcr.io/getzola/zola:v0.19.2
         build
       delegate_to: localhost
       tags:
         - build
 
     - name: Ensure website is remotely Deployed
-      synchronize:
+      ansible.posix.synchronize:
         src: "{{ local_path }}"
         dest: "{{ remote_path }}"
-        archive: yes
-        delete: yes
-        recursive: yes
+        archive: true
+        delete: true
+        recursive: true
       tags:
         - deploy
 
     - name: Enforce permissions
-      file:
+      ansible.builtin.file:
         path: "{{ remote_path }}"
         owner: wwwrun
         group: root
@@ -47,7 +48,7 @@
     - name: Ensure website is Online
       ansible.builtin.uri:
         url: 'https://ordinobsolete.fr'
-        return_content: yes
+        return_content: true
       register: http_response
       failed_when: "'Ordinobsolete' not in http_response.content"
       tags:
