@@ -14,4 +14,10 @@ name      = "⬇️  AMD Athlon 64"
 thumbnail = "/images/cpu/logo_athlon64.svg"
 odg_url   = "/images/stickers/stickers_amd_athlon64.odg"
 pdf_url   = "/images/stickers/stickers_amd_athlon64.pdf"
+
+[[extra.files]]
+name = "⬇️  NVIDIA to 2006"
+thumbnail = "/images/gpu/logo_nvidia_to_2006.webp"
+odg_url   = "/images/stickers/stickers_nvidia_to_2006.odg"
+pdf_url   = "/images/stickers/stickers_nvidia_to_2006.pdf"
 +++
