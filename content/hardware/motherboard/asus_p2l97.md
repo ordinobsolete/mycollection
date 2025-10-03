@@ -31,9 +31,3 @@ pictures  = ["/images/motherboard/asus_p2l97_front.webp"]
   year                       = 1998
   condition                  = "Working"
 +++
-
-
-<div class="block">
-<p>See <a href="https://theretroweb.com/motherboards/s/asus-p2l97-rev.-1.05">theretroweb.com</a>.</p>
-<p>I had stability issues and was unable to make an ATI 128 working but I've been told this may be related to my CPU (Pentium III) which is not officialy supported.
-</div>
